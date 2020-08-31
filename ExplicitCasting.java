@@ -7,6 +7,6 @@ public class ExplicitCasting {
 
         int ii = (int) dd;
         System.out.println(i);
-        System.out.println(i);
+        System.out.println(ii);
     }
 }
