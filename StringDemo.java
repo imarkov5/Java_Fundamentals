@@ -45,5 +45,8 @@ public class StringDemo {
         String b2 = new String("word");
         System.out.println(a2 == b2);//they are not the same exact object
         System.out.println(a2.equals(b2));//same exact characters
+        String a3 = "word";
+        String b3 = "word";
+        System.out.println(a3 == b3);//it's going to be true, because they are not two different objects
     }
 }
