@@ -23,9 +23,14 @@ public class StringManipulatorTesting{
         System.out.println(e);
 
         StringManipulator manipulator3 = new StringManipulator();
-        String word1 = manipulator3.concatSubstring("Hello", 1, 2, "world");
+        String word1 = manipulator3.concatSubstring("Hello", 2, 4, "world");
         System.out.println(word1);
 
+
+        StringManipulator manipulator4 = new StringManipulator();
+        int numCh = 6;
+        String randomStr = manipulator4.randomString(numCh);
+        System.out.println(randomStr);
 
     }
 }

@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class StringManipulator{
     public static String trimAndConcat(String str1, String str2){
         return str1.trim().concat(str2.trim());
@@ -23,5 +25,13 @@ public class StringManipulator{
             substr = "LOL";
         }
         return substr.concat(string2);
+    }
+    public static String randomString(int numChars){
+        String output = "";
+        Random r = new Random();
+        for(int i=0; i < numChars; i++){
+            output += Character.toChars(r.nextInt(122 -97) + 97)[0];
+        }
+        return output;
     }
 }
