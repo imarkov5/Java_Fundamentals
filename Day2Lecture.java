@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 
 public class Day2Lecture{
@@ -54,7 +55,33 @@ public class Day2Lecture{
         }
 
         //For Each Loop
+        for(String num : numbersSpelledOut){
+            System.out.println(num);
+        }
 
-        
+        //Hash Map - won't keep the order.
+        HashMap<String, String> ourHobbies = new HashMap<String, String>();
+        ourHobbies.put("Edgar", "Video Games");
+        ourHobbies.put("Justin", "Making Wine");
+        ourHobbies.put("Jeremy", "Cryptocurrency");
+        ourHobbies.put("Frank", "Sleep");
+        ourHobbies.put("Ozair", "Traveling");
+        ourHobbies.put("Tailor", "Running");
+        ourHobbies.put("Matthew", "Photography");
+        ourHobbies.put("Zach", "WebFun");
+        System.out.println(ourHobbies);
+
+        System.out.println(ourHobbies.get("Edgar"));
+
+        for(String name : ourHobbies.keySet()){
+            System.out.println(name);
+        }
+        for(String name : ourHobbies.values()){
+            System.out.println(name);
+        }
+
+        for(HashMap.Entry<String, String>  nameHobbies: ourHobbies.entrySet()){
+            System.out.println("key: " + nameHobbies.getKey() + ", value: " + nameHobbies.getValue());
+        }
     }
 }
