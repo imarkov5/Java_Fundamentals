@@ -1,3 +1,7 @@
+import java.util.Arrays;
+import java.util.ArrayList;
+
+
 public class Day2Lecture{
     public static void main(String[] args) {
         /*String name = "Jeremy";
@@ -14,22 +18,43 @@ public class Day2Lecture{
 
         String[] people = {"Matthew", "Jaremy", "Edgar"};
         //you can't add new index in to the existing array
-        people[3] = "Justin"; // out ob bounds error'
-
+        //people[3] = "Justin"; // out ob bounds error'
+        System.out.println(people[2]);
         //On of the ways to have more people
-        String newPeople = new String();
-        newPeople[0] = "Matthew";
-        newPeople[1] = "Matthew";
-        newPeople[2] = "Matthew";
-        newPeople[3] = "Matthew";
-        newPeople[4] = "Matthew";
-        newPeople[5] = "Matthew";
-        newPeople[6] = "Matthew";
-        newPeople[7] = "Matthew";
-        newPeople[8] = "Matthew";
-        newPeople[9] = "Matthew";
-        newPeople[10] = "Matthew";
-        System.out.println(newPeople);
+        String[] newPeople = new String[10];
+        
+        int[] numbers = new int[10];
+        for (int i = 0; i < numbers.length; i ++){
+            numbers[i] = i +1;   
+        }
+        System.out.println(numbers);//numbers is an object and it will print out memory location of this object
+        //after we imported Arrays library:
+        System.out.println(Arrays.toString(numbers));// we can see classical array
 
+        //to have an array with different types, use object
+        Object[] myObjectArr = {"matthew", 13, 'c', true};
+
+        for(int i = 0; i < numbers.length; i++){
+            System.out.println(numbers[i]);
+
+        }
+
+        //Collections Superclass
+        //ArrayLists
+        ArrayList<String> numbersSpelledOut = new ArrayList<String>();
+        numbersSpelledOut.add("one");
+        numbersSpelledOut.add("two");
+        numbersSpelledOut.add("three");
+        numbersSpelledOut.add("four");
+        System.out.println(numbersSpelledOut);
+        System.out.println(numbersSpelledOut.get(1));//equivalent to arr[1] in JS
+
+        for(int i = 0; i < numbersSpelledOut.size(); i++){
+            System.out.println(numbersSpelledOut.get(i));
+        }
+
+        //For Each Loop
+
+        
     }
 }
