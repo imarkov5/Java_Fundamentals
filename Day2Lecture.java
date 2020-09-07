@@ -83,5 +83,30 @@ public class Day2Lecture{
         for(HashMap.Entry<String, String>  nameHobbies: ourHobbies.entrySet()){
             System.out.println("key: " + nameHobbies.getKey() + ", value: " + nameHobbies.getValue());
         }
+
+        //Methods
+        //Get Max Value
+        int[] someNums = {1,13,33,19,102,40, 9};
+        System.out.println(getMaxValue(someNums));
+
+        //Basic Debugger
+
+        for(int i = 0; i <= someNums.length; i++){ // i can't be equal to length, without try and catch java will throw an error
+            try{
+                System.out.println(someNums[i]);
+            } catch (Exception e){
+                System.out.println(e);
+            }
+        }
     }
+    public static int getMaxValue(int[] numbers){
+        int greatestValue = numbers[0];
+        for(int i = 0; i < numbers.length; i++){
+            if( numbers[i] > greatestValue){
+                greatestValue = numbers[i];
+            }
+        }
+        return greatestValue;
+    }
+
 }
