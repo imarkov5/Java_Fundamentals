@@ -1,19 +1,53 @@
+import java.util.Arrays;
+import java.util.ArrayList;
+
 public class BasicJava {
     public static void main(String[] args) {
         //Print 1-255
         //Write a method that prints all the numbers from 1 to 255.
 
+        for(int i = 1; i <=255; i++){
+            System.out.print(i+", ");
+        }
+
         /*Print odd numbers between 1-255
         Write a method that prints all the odd numbers from 1 to 255.*/
 
+        for(int i = 1; i <= 255; i++){
+            if(i % 2 != 0){
+                System.out.print(i + ", ");
+            }
+        }
+
         // Print Sum
-        // Write a method that prints 
+        // Write a method that prints the numbers from 0 to 255, but this time print the sum of the numbers that have been printed so far.
+
+        int sum = 0;
+        for(int i = 0; i <= 255; i++){
+            sum += i;
+            System.out.println("New number: " + i + "  Sum: " + sum);
+        }
 
         //Iterating through an array
         //Given an array X, say [1,3,5,7,9,13], write a method that would iterate through each member of the array and print each value on the screen. Being able to loop through each member of the array is extremely important.
 
+        int[] arrayX = {1,3,5,7,9,13};
+        for(int i = 0; i < arrayX.length; i++){
+            System.out.println(arrayX[i]);
+        }
+
         //Find Max
         //Write a method (sets of instructions) that takes any array and prints the maximum value in the array. Your method should also work with a given array that has all negative numbers (e.g. [-3, -5, -7]), or even a mix of positive numbers, negative numbers and zero.
+
+        int[] myArray = {0,1,4,7,-1,2,-8,10,22,1,-8};
+        int max = myArray[0];
+        for(int i = 0; i < myArray.length; i++){
+            if(myArray[i] > max){
+                max = myArray[i];
+            }
+        }
+        System.out.println(max);
+
 
         //Get Average
         //Write a method that takes an array, and prints the AVERAGE of the values in the array. For example for an array [2, 10, 3], your method should print an average of 5. Again, make sure you come up with a simple base case and write instructions to solve that base case first, then test your instructions for other complicated cases.
