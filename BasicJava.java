@@ -8,6 +8,7 @@ public class BasicJava {
         FindMax(nums);
         FindMin(nums);
         MaxMinAverage(nums);
+        ShiftValues(nums);
         System.out.println(GetArraySum(nums));
     }
 
@@ -122,6 +123,7 @@ public class BasicJava {
                 nums.add(i);
             }
         }
+        return nums;
     }
 
         //Greater Than Y
@@ -154,17 +156,29 @@ public class BasicJava {
                 nums[i] = 0;
             }
         }
+        System.out.println(nums);
     }
 
         //Max, Min, and Average
         //Given any array x, say [1, 5, 10, -2], write a method that returns an array with the maximum number in the array, the minimum value in the array, and the average of the values in the array. The returned array should be three elements long and contain: [MAXNUM, MINNUM, AVG]
 
     public static void MaxMinAverage(int[] nums){
-        
+        int min = FindMin(nums);
+        int max = FindMax(nums);
+        double avg = GetAverage(nums);
+        System.out.println(String.format("Max: %d, Min: %d, Average: %f", max, min, avg));
     }
 
         //Shifting the Values in the Array
         //Given any array x, say [1, 5, 10, 7, -2], write a method that shifts each number by one to the front. For example, when the method is done, an x of [1, 5, 10, 7, -2] should become [5, 10, 7, -2, 0]. Notice that the last number is 0. The method does not need to wrap around the values shifted out of bounds.
+
+    public static void ShiftValues(int[] arr){
+        for(int i = 0; i < arr.length - 1; i++){
+            arr[i] = arr[i+1];
+        }
+        arr[arr.length - 1] = 0;
+        System.out.println(Arrays.toString(arr));
+    }    
 
     
 }
