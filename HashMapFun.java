@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Set;
 
-public class HshMapFun {
+public class HashMapFun {
     public static void main(String[] args) {
         //<key, value>
         HashMap<String, String> userMap = new HashMap<String, String>();
@@ -13,7 +13,7 @@ public class HshMapFun {
         System.out.println("The full name is: " + name);
 
         //get the keys by using the keySet method
-        Set<String> keys = userMap.keySet();
+        Set<String> keys = userMap.keySet(); //Set is a collection unordered unique values
         for(String key : keys) {
             System.out.print(key + " - ");
             System.out.print(userMap.get(key) + ", ");
