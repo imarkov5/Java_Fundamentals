@@ -3,7 +3,7 @@ import java.util.Collections;
 import java.util.Random;
 
 public class Puzzling {
-    public static void main(final String[] args) {
+    public static void main(String[] args) {
 
         Random r = new Random();
 
