@@ -18,6 +18,20 @@ public class Pizza {
         this.slices = 8;
     }
 
+    //Method Overloading. This constructor is for a customer - there is no price, because we don't want a customer to change the price
+
+    public Pizza(String sauce, String[] toppings, char size){
+        this.sauce = sauce;
+        this.toppings = toppings;
+        this.size = size;
+        this.price = 20;
+        this.slices = 10;
+    }
+
+    public Pizza(){
+
+    }
+
     //Things we can do with pizza
     public void displayPizza(){
         //display pizza
@@ -27,8 +41,26 @@ public class Pizza {
     //eat a slice
     public void eatASlice(int slices){
         System.out.printf("You have eaten %d slices. ", slices);
+        
         this.slices -= slices;
+        
         System.out.println("The pizza now has " + this.slices + " left");
+    }
+
+    //method Overloading for eat a slice, here there's no parameters because this method would allow to eat only 1 slice:
+
+    public void eatASlice(){
+        System.out.printf("You have eaten 1 slice of pizza.");
+        this.slices -=1;
+        System.out.println("The pizza now has " + this.slices + " left");
+
+    }
+
+    //Vegetarian pizza takes off slice of pepperoni pizza
+    public void pizzaFight(Pizza otherPizza){
+        otherPizza.setSlices(otherPizza.getSlices() - 1);
+        System.out.println(Arrays.toString(this.toppings) + " pizza just cut 1 slice from " + Arrays.toString(otherPizza.toppings));
+        System.out.println("Other pizza now has " + otherPizza.getSlices());
     }
 
     //Getters
@@ -66,5 +98,9 @@ public class Pizza {
     public void setSlices(int slices){
         this.slices = slices;
     }
+    public void setToppings(String[] toppings){
+        this.toppings = toppings;
+    }
+
 
 }
