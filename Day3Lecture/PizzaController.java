@@ -10,5 +10,12 @@ public class PizzaController {
 
         Pizza pepperoniPizza = new Pizza("white sauce", new String[]{"pepperoni", "cheese"}, 'L', 14.99);
         pepperoniPizza.displayPizza();
+        //pepperoniPizza.sauce = "marinara" won't work because sauce is set to private
+        System.out.println(pepperoniPizza.getSauce());
+        pepperoniPizza.setSauce("");
+        pepperoniPizza.setSauce("Marinara");
+        System.out.println(pepperoniPizza.getSauce());
+        pepperoniPizza.eatASlice(3);
+        System.out.println(pepperoniPizza.getSlices());
     }
 }

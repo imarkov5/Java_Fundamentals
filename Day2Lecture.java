@@ -1,6 +1,7 @@
 import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map.Entry;
 
 
 public class Day2Lecture{
@@ -47,21 +48,21 @@ public class Day2Lecture{
         numbersSpelledOut.add("two");
         numbersSpelledOut.add("three");
         numbersSpelledOut.add("four");
-        System.out.println(numbersSpelledOut);
+        System.out.println(numbersSpelledOut);// when we use collections superclass it will print out values not memory location
         System.out.println(numbersSpelledOut.get(1));//equivalent to arr[1] in JS
 
-        for(int i = 0; i < numbersSpelledOut.size(); i++){
-            System.out.println(numbersSpelledOut.get(i));
+        for(int i = 0; i < numbersSpelledOut.size(); i++){ //method .length in collections is .size
+            System.out.println(numbersSpelledOut.get(i));//use get method of collections to get a value; where in Arrays we would use numbers[i]
         }
 
-        //For Each Loop
+        //For Each Loop - Enhanced For Loop
         for(String num : numbersSpelledOut){
             System.out.println(num);
         }
 
-        //Hash Map - won't keep the order.
-        HashMap<String, String> ourHobbies = new HashMap<String, String>();
-        ourHobbies.put("Edgar", "Video Games");
+        //Hash Map - like dictionary, but won't keep the order.
+        HashMap<String, String> ourHobbies = new HashMap<String, String>(); // <key, value>
+        ourHobbies.put("Edgar", "Video Games"); //put method to put keys and values
         ourHobbies.put("Justin", "Making Wine");
         ourHobbies.put("Jeremy", "Cryptocurrency");
         ourHobbies.put("Frank", "Sleep");
@@ -69,10 +70,11 @@ public class Day2Lecture{
         ourHobbies.put("Tailor", "Running");
         ourHobbies.put("Matthew", "Photography");
         ourHobbies.put("Zach", "WebFun");
-        System.out.println(ourHobbies);
+        System.out.println(ourHobbies); //it will print out keys and values, because Hash Map is a collection superclass
 
         System.out.println(ourHobbies.get("Edgar"));
 
+        //keySet() and values() methods
         for(String name : ourHobbies.keySet()){
             System.out.println(name);
         }
@@ -80,14 +82,19 @@ public class Day2Lecture{
             System.out.println(name);
         }
 
-        for(HashMap.Entry<String, String>  nameHobbies: ourHobbies.entrySet()){
+
+        //For Loop in HashMap as a whole
+        for(HashMap.Entry<String, String>  nameHobbies : ourHobbies.entrySet()) {
             System.out.println("key: " + nameHobbies.getKey() + ", value: " + nameHobbies.getValue());
         }
 
+
+
+        
         //Methods
         //Get Max Value
         int[] someNums = {1,13,33,19,102,40, 9};
-        System.out.println(getMaxValue(someNums));
+        System.out.println(getMaxValue(someNums));// to create getMaxValue method we need to get out of main method
 
         //Basic Debugger
 

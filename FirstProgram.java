@@ -12,9 +12,13 @@ public class FirstProgram{
         char myChar = 'd'; // with single quotes; stores single character
 
         //Wrapper classes
-        Integer myInteger = 10000;
-        Character myCharacter = 'd';
+        Integer myInteger = 10000;//Same as int, but with methods attached
+        Character myCharacter = 'd';//Same as char but with methods attached
         System.out.println(Character.toUpperCase(myCharacter));
+
+
+        //When do we use primitive variables vs wrapper classes: if we need a variable for "For loop" (something that counts up to keep track of the loop) we can use just primitive variables, and we use wrappers to work with their methods 
+
 
         //Strings
         String myString = "Java August 2020";
@@ -62,7 +66,7 @@ public class FirstProgram{
         FizzBuzzTest();
     }
 
-    //to declare other method we need to come out of main method parenthesis
+    //to declare other method we need to come out of main method parenthesis. Methods are the same as functions in JS
     //in JS: function sayHello(name){
     //       console.log("Hello" + name)}
     //In JAVA:

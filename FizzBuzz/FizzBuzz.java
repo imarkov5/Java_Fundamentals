@@ -10,4 +10,11 @@ public class FizzBuzz {
             return Integer.toString(number);
         }
     }
+
+    public void fizzBuzzCounter(){
+        for(int i = 1; i <= 100; i++){
+            String result = fizzBuzz(i);
+            System.out.println("Number: " + i + " - " + " Result: " + result);
+        }
+    }
 }
