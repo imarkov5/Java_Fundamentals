@@ -1,22 +1,26 @@
 public class VehicleTest {
     public static void main(String[] args) {
-        Vehicle bike = new Vehicle();
+        Vehicle redVehicle = new Vehicle("red");
+        String color = redVehicle.getColor();
+        System.out.println("The vehicle color is " + color);
 
-        Vehicle car = new Vehicle();
+        // Vehicle bike = new Vehicle();
 
-        bike.setNumberOfWheels(2);
-        bike.setColor("red");
+        // Vehicle car = new Vehicle();
 
-        int bikeWheels = bike.getNumberOfWheels();
-        String bikeColor = bike.getColor();
+        // bike.setNumberOfWheels(2);
+        // bike.setColor("red");
 
-        car.setNumberOfWheels(4);
-        car.setColor("black");
+        // int bikeWheels = bike.getNumberOfWheels();
+        // String bikeColor = bike.getColor();
 
-        int carWheels = car.getNumberOfWheels();
-        String carColor = car.getColor();
+        // car.setNumberOfWheels(4);
+        // car.setColor("black");
 
-        System.out.println("Bike object - Wheels: " + bikeWheels + ", Color: " + bikeColor);
-        System.out.println("Car object - Wheels: " + carWheels + ", Color: " + carColor);
+        // int carWheels = car.getNumberOfWheels();
+        // String carColor = car.getColor();
+
+        // System.out.println("Bike object - Wheels: " + bikeWheels + ", Color: " + bikeColor);
+        // System.out.println("Car object - Wheels: " + carWheels + ", Color: " + carColor);
     }
 }
