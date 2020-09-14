@@ -8,9 +8,13 @@ public class Greeter {
         return createGreeting("World");
     }
     public String greet(String firstName, String lastName){
+        System.out.println("We are about to greet " + firstName);
         return createGreeting(firstName + " " + lastName);
     }
     private String createGreeting(String toBeGreeted){
         return "Greeting " + toBeGreeted + ", welcome to coding dojo";
+    }
+    public static void testGreeting(String name){
+        System.out.println("This is a test of a static method, " + name);
     }
 }
