@@ -1,6 +1,6 @@
 public class GreeterTest {
     public static void main(String[] args) {
-        Greeter.testGreeting("Kelvin");//this is an example that we can use static method without the class being instantiated
+        Greeter.testGreeting("Kelvin");//this is an example that we can use static method without the class Greeter being instantiated
         // Greeter g = new Greeter();
         // String greeting = g.greet();
         // String greetingWithName = g.greet("Sophie", "Markov");
