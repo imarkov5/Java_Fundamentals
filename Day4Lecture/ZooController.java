@@ -12,6 +12,11 @@ public class ZooController {
         //     System.out.println(m.getSpecies());
         // }
 
-        gorilla.sleep();
+        // gorilla.sleep();
+        // System.out.println(gorilla.getHealth());
+
+        dolphin.battle(gorilla);
+        System.out.println(gorilla.getHealth());
+
     }
 }
