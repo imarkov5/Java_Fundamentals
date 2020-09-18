@@ -14,7 +14,7 @@ public class ZooController {
 
         // gorilla.sleep();
         // System.out.println(gorilla.getHealth());
-
+        System.out.println(gorilla.getHealth());
         dolphin.battle(gorilla);
         System.out.println(gorilla.getHealth());
 

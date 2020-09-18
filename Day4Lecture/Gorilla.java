@@ -13,4 +13,8 @@ public class Gorilla extends Mammal {
     public void eatBanana(){
         System.out.println("is eating a banana");
     }
+    public int takeDamage(int damageAmount){
+        this.health -= (damageAmount/2);
+        return health;
+    }
 }

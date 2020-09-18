@@ -1,4 +1,4 @@
-public class Mammal {
+public class Mammal implements Attackable{
     protected String species;
     protected int health;
     protected int strength;
@@ -31,9 +31,13 @@ public class Mammal {
         this.health += 2;
         System.out.println("zzz");
     }
-    public void battle(Mammal target){
+    public int takeDamage(int damageAmount){
+        this.health -= damageAmount;
+        return health;
+    }
+    public void battle(Attackable target){
         //decrement health
-        target.health -= 5;
-
+        int damage = 5;
+        target.setHealth(target.getHealth() - takeDamage(damage));
     }
 }
