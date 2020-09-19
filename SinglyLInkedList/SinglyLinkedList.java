@@ -1,10 +1,10 @@
 public class SinglyLinkedList {
-    public SLLNode head;
+    private SLLNode head;
     public SinglyLinkedList(){
         this.head = null;
     }
     private boolean isEmpty(){
-        return this.head ==null;
+        return this.head == null;
     }
     //SLL methods go here. As a starter, we will show you how to add a node to the list.
     public void addFront(int value){
@@ -20,7 +20,6 @@ public class SinglyLinkedList {
         SLLNode newNode = new SLLNode(value);
         if(head == null){
             head = newNode;
-            return;
         } else {
             SLLNode runner = this.head;
             while(runner.next != null){
@@ -29,14 +28,21 @@ public class SinglyLinkedList {
             runner.next = newNode;
         }
     }
-    public boolean Contains(int value){
+    public boolean contains(int value){
         SLLNode runner = this.head;
         while(runner != null){
-            if(runner.value == value)
+            if(runner.value == value){
                 return true;
+            }
             runner = runner.next;
         }
         return false;
+    }
+    public void removeFront(){
+        if(isEmpty()){
+            return;
+        }
+        head = head.next;
     }
     public Integer removeBack(){
         SLLNode runner = head;
@@ -66,13 +72,13 @@ public class SinglyLinkedList {
         }
         SLLNode runner = this.head;
         while(runner.next != null){
-            System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$");
-            String s = String.format("NOde Value: %d :: Next Value: %d", runner.value, runner.next.value);
+            System.out.println("***********************************");
+            String s = String.format("Node Value: %d :: Next Value: %d", runner.value, runner.next.value);
             System.out.println(s);
             runner = runner.next;
         }
-        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$");
-        String s = String.format("Node Value: %d :: NExt Value: null", runner.value);
+        System.out.println("**************************************");
+        String s = String.format("Node Value: %d :: Next Value: null", runner.value);
         System.out.println(s);
     }
 }
