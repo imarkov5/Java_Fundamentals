@@ -1,8 +1,13 @@
 public class Human {
-    private int strength = 3;
-    private int stealth = 3;
-    private int intelligence = 3;
-    private int health = 100;
+    // private int strength = 3;
+    // private int stealth = 3;
+    // private int intelligence = 3;
+    // private int health = 100;
+
+    protected int strength = 3;
+    protected int stealth = 3;
+    protected int intelligence = 3;
+    protected int health = 100;
 
     //getters and setters
     public int getIntelligence(){
@@ -30,9 +35,10 @@ public class Human {
         this.health = newHealth;
     }
 
-    public void attack(Human target){
+    public int attack(Human target){
         target.health -= this.strength;
-        System.out.println("Health of attacked human now: " + target.health);  
+        System.out.println("Health of attacked human now: " + target.health);
+        return target.health;
     }
 
 }
