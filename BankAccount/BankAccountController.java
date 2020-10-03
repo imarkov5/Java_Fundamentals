@@ -12,5 +12,23 @@ public class BankAccountController {
         System.out.println(acct1.getCheckingBalance());
         System.out.println(acct1.getSavingsBalance());
         System.out.println(acct1.TotalMoney());
+        System.out.println("*************************************");
+
+
+        acct2.depositToChecking(100.00);
+        acct2.depositToSavings(200.00);
+        System.out.println(acct2.getCheckingBalance());
+        System.out.println(acct2.getSavingsBalance());
+        System.out.println(acct2.TotalMoney());
+        System.out.println("*************************************");
+
+        acct1.withdrawFromChecking(150.50);
+        acct1.withdrawFromSavings(250.50);
+        System.out.println(acct1.getCheckingBalance());
+        System.out.println(acct1.getSavingsBalance());
+        System.out.println(acct1.TotalMoney());
+        System.out.println("*************************************");
+
+
     }
 }
