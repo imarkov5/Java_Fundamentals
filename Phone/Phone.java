@@ -1,4 +1,4 @@
-public abstract class Phone {
+public abstract class Phone{
     private String versionNumber;
     private int batteryPercentage;
     private String carrier;
@@ -14,7 +14,7 @@ public abstract class Phone {
     public String getCarrier(){
         return this.carrier;
     }
-    public String ringTone(){
+    public String getRingTone(){
         return this.ringTone;
     }
 
